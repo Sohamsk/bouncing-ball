@@ -4,14 +4,15 @@
 #include <raylib.h>
 
 class Ball {
-      public:
 	Vector2 location;
 	Vector2 velocity;
 	float radius;
 	Color color;
 
+      public:
 	void updateBall(float delta, int screenWidth, int screenHeight);
 	void initBall(float radius, float angle, float magnitude, Color color,
 		      int screenWidth, int screenHeight);
+	void drawBall();
 };
 #endif

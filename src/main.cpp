@@ -9,6 +9,8 @@ int main() {
 	float angle;
 	float magnitude;
 
+	SetTargetFPS(60);
+
 	std::cout << "Enter angle of the ball: ";
 	std::cin >> angle;
 	std::cout << "Enter the speed of the ball: ";
@@ -24,7 +26,7 @@ int main() {
 		ball.updateBall(delta, screenWidth, screenHeight);
 		BeginDrawing();
 		ClearBackground(RAYWHITE);
-		DrawCircleV(ball.location, ball.radius, ball.color);
+		ball.drawBall();
 		EndDrawing();
 	}
 	CloseWindow();

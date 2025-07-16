@@ -37,3 +37,7 @@ void Ball::updateBall(float delta, int screenWidth, int screenHeight) {
 		this->location.y = this->radius;
 	}
 }
+
+void Ball::drawBall() {
+	DrawCircleV(this->location, this->radius, this->color);
+}
